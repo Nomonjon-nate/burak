@@ -1,12 +1,26 @@
-// MITASK-L:
+// MITASK-M:
 
-function reverseSentence(sntc: string): string {
-    return sntc
-        .split(" ")
-        .map((word: string) =>
-            word.split("").reverse().join(""))
-        .join(" ");
+function getSquareNumbers(numbers: number[]): object[] {
+    return numbers.map((number) => {
+        return {
+            number: number,
+            square: number ** 2
+        };
+    })
 }
 
-console.log(reverseSentence("we like coding!"));
-console.log(reverseSentence("Hello World!"));
+console.log(getSquareNumbers([4, 5, 8]));
+
+
+// MITASK-L:
+
+// function reverseSentence(sntc: string): string {
+//     return sntc
+//         .split(" ")
+//         .map((word: string) =>
+//             word.split("").reverse().join(""))
+//         .join(" ");
+// }
+
+// console.log(reverseSentence("we like coding!"));
+// console.log(reverseSentence("Hello World!"));
