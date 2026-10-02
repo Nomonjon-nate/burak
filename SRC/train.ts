@@ -1,13 +1,24 @@
+// MITASK-Q:
+// Objectda berilgan string propertysi borligini tekshirsin.
+// Masalan: hasProperty({name: "BMW"}, "name") return true
+
+function hasProperty(object: object, property: string): boolean {
+    return property in object;
+}
+
+console.log(hasProperty({ object: "car" }, "object"));
+console.log(hasProperty({ model: "Audi" }, "owner"));
+
 // MITASK-P:
 // Objectni nested array sifatida convert qilib qaytarsin.
 // Masalan: objectToArray({a: 10, b: 20}) return [["a", 10], ["b", 20]]
 
-function objectToArray(data: object): [string, any][] {
-    return Object.entries(data);
-}
+// function objectToArray(data: object): [string, any][] {
+//     return Object.entries(data);
+// }
 
-console.log(objectToArray({ a: 10, b: 20 }));
-console.log(objectToArray({ myFavouriteNumber: 7, doubledOne: 14 }));
+// console.log(objectToArray({ a: 10, b: 20 }));
+// console.log(objectToArray({ myFavouriteNumber: 7, doubledOne: 14 }));
 
 
 
