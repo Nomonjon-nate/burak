@@ -1,13 +1,39 @@
+// MITASK-R:
+// "1 + 2" ko'rinishidagi stringni hisoblab number qaytarsin.
+// Masalan: calculate("1 + 3") return 4
+
+function calculate(str: string): number {
+    const [a, oper, b] =
+        str.split(" ");
+    if (oper === "+") {
+        return Number(a) + Number(b);
+    }
+    if (oper === "-") {
+        return Number(a) - Number(b);
+    }
+    if (oper === "*") {
+        return Number(a) * Number(b);
+    }
+    if (oper === "/") {
+        return Number(a) / Number(b);
+    }
+
+    return 0;
+}
+
+console.log(calculate("1 + 3"));
+console.log(calculate("1478 / 23"));
+
 // MITASK-Q:
 // Objectda berilgan string propertysi borligini tekshirsin.
 // Masalan: hasProperty({name: "BMW"}, "name") return true
 
-function hasProperty(object: object, property: string): boolean {
-    return property in object;
-}
+// function hasProperty(object: object, property: string): boolean {
+//     return property in object;
+// }
 
-console.log(hasProperty({ object: "car" }, "object"));
-console.log(hasProperty({ model: "Audi" }, "owner"));
+// console.log(hasProperty({ object: "car" }, "object"));
+// console.log(hasProperty({ model: "Audi" }, "owner"));
 
 // MITASK-P:
 // Objectni nested array sifatida convert qilib qaytarsin.
